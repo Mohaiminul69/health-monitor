@@ -1,12 +1,13 @@
 import React from "react";
 import logo from "../../Images/880853.png";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Form, Row, Button } from "react-bootstrap";
 import "./login.css";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
-  const { signInUsingGoogle } = useAuth();
+  const { signInUsingGoogle, handleLogin, handlePassword, handleEmail } =
+    useAuth();
   const location = useLocation();
   const history = useHistory();
   const redirect_uri = location.state?.from || "/home";
@@ -28,17 +29,43 @@ const Login = () => {
         <Col sm={12} md={6}>
           <div className="d-flex flex-column mt-4">
             <h2>Login</h2>
-            <input
-              className="customInput mt-3"
-              placeholder="Email"
-              type="email"
-            />
-            <input
-              className="customInput mt-3"
-              placeholder="Password"
-              type="password"
-            />
-            <button className="btn btn-danger mt-3">Login</button>
+            <Form className="mt-3" onSubmit={handleLogin}>
+              <Form.Group
+                as={Row}
+                className="mb-3"
+                controlId="formHorizontalEmail"
+              >
+                <Col sm={12}>
+                  <Form.Control
+                    className="customInput"
+                    onBlur={handleEmail}
+                    type="email"
+                    placeholder="Email"
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group
+                as={Row}
+                className="mb-3"
+                controlId="formHorizontalPassword"
+              >
+                <Col sm={12}>
+                  <Form.Control
+                    className="customInput"
+                    onBlur={handlePassword}
+                    type="password"
+                    placeholder="Password"
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row} className="mb-3">
+                <Col sm={{ span: 12 }}>
+                  <Button type="submit" variant="danger" className="w-100">
+                    Login
+                  </Button>
+                </Col>
+              </Form.Group>
+            </Form>
             <h6 className="mt-3">
               New to Health Monitor ? <Link to="register">Create Account</Link>
             </h6>

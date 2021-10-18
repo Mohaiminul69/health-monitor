@@ -13,7 +13,7 @@ const ServiceDetails = () => {
       .then((data) => setHealthService(data));
   }, []);
   const selectedService = healthService.filter(
-    (service) => service.id == serviceDetails
+    (service) => service.id === parseInt(serviceDetails)
   );
   return (
     <Container>

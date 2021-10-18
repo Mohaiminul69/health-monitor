@@ -1,12 +1,27 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Col, Container, Form, Row, Button } from "react-bootstrap";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import logo from "../../Images/880853.png";
 import "./register.css";
 
 const Register = () => {
-  const { signInUsingGoogle } = useAuth();
+  const {
+    signInUsingGoogle,
+    handleRegistration,
+    handlePassword,
+    handleEmail,
+    error,
+    handleName,
+  } = useAuth();
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_uri = location.state?.from || "/home";
+  const handleGoogleLogin = () => {
+    signInUsingGoogle().then((res) => {
+      history.push(redirect_uri);
+    });
+  };
   return (
     <Container>
       <Row className="py-5">
@@ -20,33 +35,60 @@ const Register = () => {
         <Col sm={12} md={6}>
           <div className="d-flex flex-column mt-4">
             <h2>Create an Account</h2>
-            <input
-              className="customInput mt-3"
-              placeholder="Name"
-              type="text"
-            />
-            <input
-              className="customInput mt-3"
-              placeholder="Email"
-              type="email"
-            />
-            <input
-              className="customInput mt-3"
-              placeholder="Password"
-              type="password"
-            />
-            <input
-              className="customInput mt-3"
-              placeholder="Confirm Password"
-              type="password"
-            />
-            <button className="btn btn-danger mt-3">Submit</button>
+            <Form className="mt-3" onSubmit={handleRegistration}>
+              <Form.Group as={Row} className="mb-3">
+                <Col sm={12}>
+                  <Form.Control
+                    className="customInput"
+                    onBlur={handleName}
+                    type="text"
+                    placeholder="Username"
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group
+                as={Row}
+                className="mb-3"
+                controlId="formHorizontalEmail"
+              >
+                <Col sm={12}>
+                  <Form.Control
+                    className="customInput"
+                    onBlur={handleEmail}
+                    type="email"
+                    placeholder="Email"
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group
+                as={Row}
+                className="mb-3"
+                controlId="formHorizontalPassword"
+              >
+                <Col sm={12}>
+                  <Form.Control
+                    className="customInput"
+                    onBlur={handlePassword}
+                    type="password"
+                    placeholder="Password"
+                  />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row} className="mb-3">
+                <Col sm={{ span: 12 }}>
+                  <Button type="submit" variant="danger" className="w-100">
+                    Submit
+                  </Button>
+                </Col>
+              </Form.Group>
+            </Form>
+            {error && <p className="text-danger">{error}*</p>}
             <h6 className="mt-3">
               Already have an account ? <Link to="login">Login</Link>
             </h6>
             <h6 className="mt-3 text-center text-muted">or</h6>
             <button
-              onClick={signInUsingGoogle}
+              onClick={handleGoogleLogin}
               className="btn btn-warning mt-3"
             >
               Sign In Using Google
