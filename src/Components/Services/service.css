@@ -1,0 +1,16 @@
+.serviceImg {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+}
+.customCard {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  background: #f1f1f1;
+  border-radius: 8px;
+  overflow: hidden;
+}

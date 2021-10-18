@@ -1,0 +1,65 @@
+[
+  {
+    "serviceTitle": "Neuromedicine",
+    "id": 1,
+    "img": "https://i.ibb.co/5rhDkvL/Neuromedicine-Doctor-Dhaka.jpg",
+    "description": "If you are facing any type of headache, or head injury, you can book and appointment with our available doctors, you can consult them online or fix a date for physical appointment.",
+    "price": "320"
+  },
+  {
+    "serviceTitle": "Gastroenterology",
+    "id": 2,
+    "img": "https://i.ibb.co/vXNchwH/Gastroenterology-Doctor-Dhaka.jpg",
+    "description": "If you are facing any type of headache, or head injury, you can book and appointment with our available doctors, you can consult them online or fix a date for physical appointment.",
+    "price": "320"
+  },
+  {
+    "serviceTitle": "Orthopaedic Surgeon",
+    "id": 3,
+    "img": "https://i.ibb.co/8sqbSn7/Orthopedics-Doctor-Dhaka.jpg",
+    "description": "If you are facing any type of headache, or head injury, you can book and appointment with our available doctors, you can consult them online or fix a date for physical appointment.",
+    "price": "320"
+  },
+  {
+    "serviceTitle": "Kidney & Medicine",
+    "id": 4,
+    "img": "https://i.ibb.co/DgwqT7H/kidney-medicine-doctor-bangladesh.jpg",
+    "description": "If you are facing any type of headache, or head injury, you can book and appointment with our available doctors, you can consult them online or fix a date for physical appointment.",
+    "price": "320"
+  },
+  {
+    "serviceTitle": "Urologist",
+    "id": 5,
+    "img": "https://i.ibb.co/LZw1bp2/Urologist-Doctor-Dhaka.jpg",
+    "description": "If you are facing any type of headache, or head injury, you can book and appointment with our available doctors, you can consult them online or fix a date for physical appointment.",
+    "price": "320"
+  },
+  {
+    "serviceTitle": "Cardiologist",
+    "id": 6,
+    "img": "https://i.ibb.co/V279mzh/Cardiologist-Dhaka.jpg",
+    "description": "If you are facing any type of headache, or head injury, you can book and appointment with our available doctors, you can consult them online or fix a date for physical appointment.",
+    "price": "320"
+  },
+  {
+    "serviceTitle": "Chest & Medicine",
+    "id": 7,
+    "img": "https://i.ibb.co/rd1czsV/Chest-Medicine-Doctor-Dhaka.jpg",
+    "description": "If you are facing any type of headache, or head injury, you can book and appointment with our available doctors, you can consult them online or fix a date for physical appointment.",
+    "price": "320"
+  },
+  {
+    "serviceTitle": "Venereologist & Dermatologist",
+    "id": 8,
+    "img": "https://i.ibb.co/s3W7FnQ/Venereologist-Dermatologist-Doctor-Dhaka.jpg",
+    "description": "If you are facing any type of headache, or head injury, you can book and appointment with our available doctors, you can consult them online or fix a date for physical appointment.",
+    "price": "320"
+  },
+  {
+    "serviceTitle": "Medicine",
+    "id": 9,
+    "img": "https://i.ibb.co/WHNt5pW/Medicine-Doctor-Dhaka.jpg",
+    "description": "If you are facing any type of headache, or head injury, you can book and appointment with our available doctors, you can consult them online or fix a date for physical appointment.",
+    "price": "320"
+  }
+]

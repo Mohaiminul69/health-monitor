@@ -1,0 +1,9 @@
+.notFoundIng {
+  width: 500px;
+}
+.notFoundDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

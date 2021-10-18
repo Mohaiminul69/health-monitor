@@ -1,0 +1,16 @@
+.detailImg {
+  width: 90%;
+}
+.detailsTitle {
+  position: relative;
+}
+.detailsTitle::after {
+  position: absolute;
+  content: "";
+  bottom: -20px;
+  left: 0;
+  border-radius: 50%;
+  width: 35%;
+  height: 5px;
+  background: crimson;
+}
