@@ -13,6 +13,9 @@ const Home = () => {
   const homeServices = services.filter((service) => service.id <= 6);
   return (
     <div>
+      {/* 
+<---------------------------- Banner Component ---------------------------->
+      */}
       <Banner />
       <Container className="py-4">
         <h1 className="display-2 mb-4 text-center text-uppercase">
@@ -28,7 +31,13 @@ const Home = () => {
             <button className="btn btn-lg btn-danger ms-3">See More</button>
           </Link>
         </div>
+        {/* 
+<---------------------- Avaiable Doctors Component ---------------------->
+      */}
         <Doctors />
+        {/* 
+<---------------------------- FAQ Component ---------------------------->
+      */}
         <FAQ />
       </Container>
     </div>

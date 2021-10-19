@@ -5,6 +5,9 @@ import Slider from "react-slick";
 import "./doctors.css";
 
 const Doctors = () => {
+  /*
+<---------------------------- Slider Data ---------------------------->
+*/
   const settings = {
     dots: true,
     infinite: true,
@@ -45,6 +48,9 @@ const Doctors = () => {
         <span className="fw-bold textBlue mt-2 fw-light">Doctors</span>
       </h1>
       <Container>
+        {/*
+<---------------------------- Using Custom Slider ---------------------------->
+        */}
         <Slider {...settings} className="mt-5">
           <div>
             <div className="availableDoctor">

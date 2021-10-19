@@ -4,6 +4,9 @@ import notFoundImg from "../../Images/404.png";
 import "./notfound.css";
 
 const NotFound = () => {
+  /*
+<---------------------- Not Found Page ---------------------->
+*/
   const history = useHistory();
   const handleBack = () => {
     history.goBack();

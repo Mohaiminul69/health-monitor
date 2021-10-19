@@ -16,19 +16,19 @@ const VideoCall = () => {
       <Row className="mt-4">
         <Col sm={12} md={4}>
           <div className="paymentCard bg-warning">
-            <i class="far fa-clock"></i>
+            <i className="far fa-clock"></i>
             <h3>Select Your Preferred Specialist & Time Slot</h3>
           </div>
         </Col>
         <Col sm={12} md={4}>
           <div className="paymentCard bg-primary">
-            <i class="fas fa-mobile-alt"></i>
+            <i className="fas fa-mobile-alt"></i>
             <h3>Provide Mobile Number, Info and Payment</h3>
           </div>
         </Col>
         <Col sm={12} md={4}>
           <div className="paymentCard bg-success">
-            <i class="fas fa-laptop-medical"></i>
+            <i className="fas fa-laptop-medical"></i>
             <h3>Start Your Consultation & Get A Digital Prescription</h3>
           </div>
         </Col>
@@ -44,7 +44,6 @@ const VideoCall = () => {
             <img
               src="https://i.ibb.co/7zFrBzH/toppng-com-doctors-582x600.png"
               alt=""
-              srcset=""
             />
           </div>
         </Col>
@@ -58,7 +57,6 @@ const VideoCall = () => {
             <img
               src="https://i.ibb.co/fnb3ZTJ/toppng-com-doctor-png-432x593.png"
               alt=""
-              srcset=""
             />
           </div>
         </Col>

@@ -23,6 +23,9 @@ const useFirebase = () => {
 
   const auth = getAuth();
 
+  /*
+<---------------------------- Google Sign In ---------------------------->
+*/
   const signInUsingGoogle = () => {
     setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
@@ -31,6 +34,9 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
+  /*
+<-------------------- Registration Using Email Password -------------------->
+*/
   const handleRegistration = () => {
     setIsLoading(true);
     document.querySelectorAll(".customInput").forEach((i) => (i.value = ""));
@@ -52,6 +58,9 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
+  /*
+<------------------------ Login Using Email Password ------------------------>
+*/
   const handleLogin = () => {
     setIsLoading(true);
     document.querySelectorAll(".customInput").forEach((i) => (i.value = ""));
@@ -71,6 +80,9 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
+  /*
+<-------------------- Setting Username on Registration -------------------->
+*/
   const setUsername = () => {
     updateProfile(auth.currentUser, {
       displayName: name,
@@ -108,6 +120,9 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
+  /*
+<--------------------- Returning States and Functions --------------------->
+*/
   return {
     user,
     signInUsingGoogle,
