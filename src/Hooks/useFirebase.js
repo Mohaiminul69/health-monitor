@@ -44,6 +44,7 @@ const useFirebase = () => {
         setUser(res.user);
         setError("");
         setUsername();
+        window.location.reload();
       })
       .catch((error) => {
         setError(error.message);
