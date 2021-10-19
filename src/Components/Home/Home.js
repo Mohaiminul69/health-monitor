@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import useHealthServices from "../../Hooks/useHealthServices";
 import Service from "../Services/Service";
 import Banner from "./Banner/Banner";
@@ -22,6 +23,11 @@ const Home = () => {
             <Service key={service.id} service={service} />
           ))}
         </Row>
+        <div className="text-center mt-3">
+          <Link to="/services">
+            <button className="btn btn-lg btn-danger">See More</button>
+          </Link>
+        </div>
         <Doctors />
         <FAQ />
       </Container>

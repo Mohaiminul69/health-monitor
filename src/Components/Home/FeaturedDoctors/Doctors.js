@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "./doctors.css";
 
@@ -6,7 +7,7 @@ const Doctors = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
@@ -51,6 +52,9 @@ const Doctors = () => {
             <p className="text-muted">
               MBBS, FCPS(DERMATOLOGY & VENAREOLOGY), DDV, Skin & Sex Disease
             </p>
+            <Link to="/videoCall">
+              <button className="btn btn-danger mb-3">Call Now</button>
+            </Link>
           </div>
         </div>
         <div>
@@ -65,6 +69,9 @@ const Doctors = () => {
               MBBS, FCPS, TRAINED IN THERAPEUTIC ENDOSCOPY (JAPAN),
               Gastroenterology
             </p>
+            <Link to="/videoCall">
+              <button className="btn btn-danger mb-3">Call Now</button>
+            </Link>
           </div>
         </div>
         <div>
@@ -75,6 +82,9 @@ const Doctors = () => {
             <p className="text-muted">
               MBBS(DHAKA), MRCS(England), FCPS(Surgery), MS(UROLOGY), Urology
             </p>
+            <Link to="/videoCall">
+              <button className="btn btn-danger mb-3">Call Now</button>
+            </Link>
           </div>
         </div>
         <div>
@@ -89,6 +99,9 @@ const Doctors = () => {
               MS (Ped. Surgery), FICS, EMSB (Australia), PhD, Child, Green Life
               Medical College Hospital
             </p>
+            <Link to="/videoCall">
+              <button className="btn btn-danger mb-3">Call Now</button>
+            </Link>
           </div>
         </div>
       </Slider>
