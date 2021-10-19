@@ -11,7 +11,7 @@ const NotFound = () => {
   return (
     <div className="notFoundDiv">
       <img className="notFoundIng my-4" src={notFoundImg} alt="" />
-      <div>
+      <div className="mb-3">
         <Link to="/">
           <button className="btn btn-danger me-5">Home</button>
         </Link>
