@@ -8,6 +8,8 @@ import AuthProvider from "./Context/AuthProvider";
 import Login from "./Components/Login/Login";
 import ServiceDetails from "./Components/Services/ServiceDetails";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import Footer from "./Components/Footer/Footer";
+import VideoCall from "./Components/Services/VideoCall";
 
 function App() {
   return (
@@ -30,10 +32,14 @@ function App() {
           <PrivateRoute path="/service/:serviceDetails">
             <ServiceDetails />
           </PrivateRoute>
+          <PrivateRoute path="/videoCall">
+            <VideoCall />
+          </PrivateRoute>
           <Route path="*">
             <NotFound />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </AuthProvider>
   );

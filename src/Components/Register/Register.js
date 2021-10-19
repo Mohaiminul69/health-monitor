@@ -22,6 +22,12 @@ const Register = () => {
       history.push(redirect_uri);
     });
   };
+  const handlePasswordVerification = (e) => {
+    e.preventDefault();
+    handleRegistration().then((res) => {
+      history.push(redirect_uri);
+    });
+  };
   return (
     <Container>
       <Row className="py-5">
@@ -35,7 +41,7 @@ const Register = () => {
         <Col sm={12} md={6}>
           <div className="d-flex flex-column mt-4">
             <h2>Create an Account</h2>
-            <Form className="mt-3" onSubmit={handleRegistration}>
+            <Form className="mt-3" onSubmit={handlePasswordVerification}>
               <Form.Group as={Row} className="mb-3">
                 <Col sm={12}>
                   <Form.Control

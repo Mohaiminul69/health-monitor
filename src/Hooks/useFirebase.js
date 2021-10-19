@@ -14,7 +14,7 @@ import initializeAuthentication from "./../Firebase/Firebase.init";
 initializeAuthentication();
 
 const useFirebase = () => {
-  const [user, setUsers] = useState({});
+  const [user, setUser] = useState({});
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,43 +27,47 @@ const useFirebase = () => {
     setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
     return signInWithPopup(auth, googleProvider)
-      .then((res) => setUsers(res.user))
+      .then((res) => setUser(res.user))
       .finally(() => setIsLoading(false));
   };
 
-  const handleRegistration = (e) => {
-    e.preventDefault();
+  const handleRegistration = () => {
+    setIsLoading(true);
+    document.querySelectorAll(".customInput").forEach((i) => (i.value = ""));
+
     if (!/(?=.{8,})/.test(password)) {
       setError("Password must be at least 6 characters long");
       return;
     }
-    createUserWithEmailAndPassword(auth, email, password)
+    return createUserWithEmailAndPassword(auth, email, password)
       .then((res) => {
-        const user = res.user;
-        console.log(user);
+        setUser(res.user);
         setError("");
         setUsername();
       })
       .catch((error) => {
         setError(error.message);
-      });
+      })
+      .finally(() => setIsLoading(false));
   };
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleLogin = () => {
+    setIsLoading(true);
+    document.querySelectorAll(".customInput").forEach((i) => (i.value = ""));
+
     if (!/(?=.{8,})/.test(password)) {
       setError("Password must be at least 6 characters long");
       return;
     }
-    signInWithEmailAndPassword(auth, email, password)
+    return signInWithEmailAndPassword(auth, email, password)
       .then((res) => {
-        const user = res.user;
-        console.log(user);
+        setUser(res.user);
         setError("");
       })
       .catch((error) => {
         setError(error.message);
-      });
+      })
+      .finally(() => setIsLoading(false));
   };
 
   const setUsername = () => {
@@ -87,9 +91,9 @@ const useFirebase = () => {
   useEffect(() => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
-        setUsers(user);
+        setUser(user);
       } else {
-        setUsers({});
+        setUser({});
       }
       setIsLoading(false);
     });

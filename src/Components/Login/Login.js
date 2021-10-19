@@ -16,6 +16,12 @@ const Login = () => {
       history.push(redirect_uri);
     });
   };
+  const handlePasswordVerification = (e) => {
+    e.preventDefault();
+    handleLogin().then((res) => {
+      history.push(redirect_uri);
+    });
+  };
   return (
     <Container>
       <Row className="py-5">
@@ -29,7 +35,7 @@ const Login = () => {
         <Col sm={12} md={6}>
           <div className="d-flex flex-column mt-4">
             <h2>Login</h2>
-            <Form className="mt-3" onSubmit={handleLogin}>
+            <Form className="mt-3" onSubmit={handlePasswordVerification}>
               <Form.Group
                 as={Row}
                 className="mb-3"

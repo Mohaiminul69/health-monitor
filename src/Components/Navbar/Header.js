@@ -26,6 +26,9 @@ const Header = () => {
             <NavLink className="navLink" to="/home">
               Home
             </NavLink>
+            <NavLink className="navLink" to="/videoCall">
+              Video Call
+            </NavLink>
             {user?.email ? (
               <Button className="ms-3" onClick={logOut} variant="danger">
                 Logout
