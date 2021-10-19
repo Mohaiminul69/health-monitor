@@ -1,0 +1,11 @@
+.availableDoctor {
+  margin: 0 4px;
+  text-align: center;
+  background: #f1f1f1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.availableDoctor img {
+  width: 100%;
+  object-fit: cover;
+}

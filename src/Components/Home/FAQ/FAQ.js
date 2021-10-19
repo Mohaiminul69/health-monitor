@@ -4,7 +4,7 @@ import "./faq.css";
 
 const FAQ = () => {
   return (
-    <Row className="mt-2 mb-1 g-3">
+    <Row className="mt-3 mb-1 g-3">
       <h1 className="display-2 mb-4 text-center text-uppercase">
         <span className="fw-bold textBlue">FAQS</span>
       </h1>
