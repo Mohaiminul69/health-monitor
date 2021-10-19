@@ -34,7 +34,7 @@ const VideoCall = () => {
         </Col>
       </Row>
       <Row className="mt-3 mb-1">
-        <Col sm={12} md={6}>
+        <Col sm={12} md={6} className="mb-3">
           <div className="bookCall">
             <div>
               <h1 className="fw-light textBlue">Specialist Doctors</h1>
@@ -51,9 +51,9 @@ const VideoCall = () => {
         <Col sm={12} md={6}>
           <div className="bookCall">
             <div>
-              <h1 className="fw-light textBlue">Specialist Doctors</h1>
-              <h3 className="fw-light text-danger">Book a Video Call</h3>
-              <button className="btn btn-danger">Book Now</button>
+              <h1 className="fw-light textBlue">Experienced MBBS Doctors</h1>
+              <h3 className="fw-light text-danger">Start a Video Call</h3>
+              <button className="btn btn-danger">Call Now</button>
             </div>
             <img
               src="https://i.ibb.co/fnb3ZTJ/toppng-com-doctor-png-432x593.png"

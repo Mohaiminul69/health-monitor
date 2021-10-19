@@ -10,6 +10,7 @@ import ServiceDetails from "./Components/Services/ServiceDetails";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Footer from "./Components/Footer/Footer";
 import VideoCall from "./Components/Services/VideoCall";
+import Membership from "./Components/Membership/Membership";
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/videoCall">
             <VideoCall />
+          </PrivateRoute>
+          <PrivateRoute path="/membership">
+            <Membership />
           </PrivateRoute>
           <Route path="*">
             <NotFound />

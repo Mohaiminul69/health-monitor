@@ -3,6 +3,8 @@ import { Container, Row } from "react-bootstrap";
 import useHealthServices from "../../Hooks/useHealthServices";
 import Service from "../Services/Service";
 import Banner from "./Banner/Banner";
+import FAQ from "./FAQ/FAQ";
+import Doctors from "./FeaturedDoctors/Doctors";
 import "./home.css";
 
 const Home = () => {
@@ -20,6 +22,8 @@ const Home = () => {
             <Service key={service.id} service={service} />
           ))}
         </Row>
+        <Doctors />
+        <FAQ />
       </Container>
     </div>
   );

@@ -29,14 +29,22 @@ const Header = () => {
             <NavLink className="navLink" to="/videoCall">
               Video Call
             </NavLink>
+            <NavLink className="navLink" to="/membership">
+              Membership
+            </NavLink>
             {user?.email ? (
               <Button className="ms-3" onClick={logOut} variant="danger">
                 Logout
               </Button>
             ) : (
-              <NavLink className="navLink" to="/login">
-                Login
-              </NavLink>
+              <Fragment>
+                <NavLink className="navLink" to="/login">
+                  Login
+                </NavLink>
+                <NavLink className="navLink" to="/register">
+                  Register
+                </NavLink>
+              </Fragment>
             )}
             {user?.displayName && (
               <Navbar.Text className="ms-3 text-white">
