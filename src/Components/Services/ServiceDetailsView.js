@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./serviceDetailsView.css";
 
 const ServiceDetailsView = ({ service }) => {
@@ -20,6 +21,9 @@ const ServiceDetailsView = ({ service }) => {
           <h4 className="text-muted mt-4 pt-3 text-capitalize">
             {description}
           </h4>
+          <Link to="/videoCall">
+            <button className="btn btn-danger mt-3">Consult Now</button>
+          </Link>
         </div>
       </Col>
     </Row>
