@@ -1,5 +1,7 @@
 .detailImg {
   width: 90%;
+  box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.2),
+    0.125em 0.125em 0.25em rgb(0 0 0 / 25%);
 }
 .detailsTitle {
   position: relative;

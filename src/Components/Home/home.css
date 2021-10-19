@@ -1,0 +1,14 @@
+.btnContainer {
+  position: relative;
+}
+.btnContainer::after {
+  position: absolute;
+  content: "";
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  width: 70%;
+  height: 5px;
+  background: crimson;
+}

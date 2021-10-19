@@ -23,9 +23,9 @@ const Home = () => {
             <Service key={service.id} service={service} />
           ))}
         </Row>
-        <div className="text-center mt-3">
+        <div className="text-center mt-4 mb-5 pt-2 btnContainer">
           <Link to="/services">
-            <button className="btn btn-lg btn-danger">See More</button>
+            <button className="btn btn-lg btn-danger ms-3">See More</button>
           </Link>
         </div>
         <Doctors />
