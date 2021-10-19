@@ -76,11 +76,13 @@ const Login = () => {
               New to Health Monitor ? <Link to="register">Create Account</Link>
             </h6>
             <h6 className="mt-3 text-center text-muted">or</h6>
-            <button
-              onClick={handleGoogleLogin}
-              className="btn btn-warning mt-3"
-            >
-              Sign In Using Google
+            <button onClick={handleGoogleLogin} className="btn btn-dark mt-3">
+              <img
+                src="https://img.icons8.com/fluency/50/000000/google-logo.png"
+                alt=""
+                className="googleIcon"
+              />
+              <span className="ms-2">Sign In Using Google</span>
             </button>
           </div>
         </Col>

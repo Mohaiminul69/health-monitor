@@ -35,7 +35,7 @@ const useFirebase = () => {
     setIsLoading(true);
     document.querySelectorAll(".customInput").forEach((i) => (i.value = ""));
 
-    if (!/(?=.{8,})/.test(password)) {
+    if (!/(?=.{6,})/.test(password)) {
       setError("Password must be at least 6 characters long");
       return;
     }
@@ -55,7 +55,7 @@ const useFirebase = () => {
     setIsLoading(true);
     document.querySelectorAll(".customInput").forEach((i) => (i.value = ""));
 
-    if (!/(?=.{8,})/.test(password)) {
+    if (!/(?=.{6,})/.test(password)) {
       setError("Password must be at least 6 characters long");
       return;
     }
