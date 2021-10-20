@@ -14,7 +14,7 @@ const Service = ({ service }) => {
         <img className="serviceImg" src={img} alt="" />
         <div className="d-flex flex-column align-items-center h-100">
           <h3 className="mt-3">{serviceTitle}</h3>
-          <p className="text-muted">{description}</p>
+          <p className="text-muted px-2">{description}</p>
         </div>
         <Link to={`/service/${id}`}>
           <button className="btn btn-danger m-4 w-75 mt-0">Details</button>
