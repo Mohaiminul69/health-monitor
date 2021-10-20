@@ -6,7 +6,7 @@ import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
-  const { signInUsingGoogle, handleLogin, handlePassword, handleEmail } =
+  const { signInUsingGoogle, handleLogin, handlePassword, handleEmail, error } =
     useAuth();
   const location = useLocation();
   const history = useHistory();
@@ -72,6 +72,7 @@ const Login = () => {
                 </Col>
               </Form.Group>
             </Form>
+            {error && <p className="text-danger">{error}*</p>}
             <h6 className="mt-3">
               New to Health Monitor ? <Link to="register">Create Account</Link>
             </h6>
