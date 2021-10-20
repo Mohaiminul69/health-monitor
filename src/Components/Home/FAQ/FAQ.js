@@ -8,7 +8,7 @@ const FAQ = () => {
       <h1 className="display-2 mb-4 text-center text-uppercase">
         <span className="fw-bold textBlue">FAQS</span>
       </h1>
-      <Col sm={12} md={6} className="imgFlex">
+      <Col sm={12} md={6}>
         <img
           className="faqImg"
           src="https://i.ibb.co/1sN2t0L/faq-card-hands-medical-doctor-384017-256.jpg"

@@ -16,12 +16,18 @@ const Register = () => {
   } = useAuth();
   const location = useLocation();
   const history = useHistory();
+  /*
+<--- Redirecting to the path where the user came from or to home or reloading the page --->
+*/
   const redirect_uri = location.state?.from || "/home";
   const handleGoogleLogin = () => {
     signInUsingGoogle().then((res) => {
       history.push(redirect_uri);
     });
   };
+  /*
+<--- Redirecting to the path where the user came from or to home or reloading the page --->
+*/
   const handlePasswordVerification = (e) => {
     e.preventDefault();
     handleRegistration().then((res) => {
@@ -88,6 +94,9 @@ const Register = () => {
                 </Col>
               </Form.Group>
             </Form>
+            {/* 
+<---------------------------- Showing Errors to UI ---------------------------->
+ */}
             {error && <p className="text-danger">{error}*</p>}
             <h6 className="mt-3">
               Already have an account ? <Link to="login">Login</Link>

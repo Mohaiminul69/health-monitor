@@ -15,12 +15,15 @@ const Home = () => {
     <div>
       {/* 
 <---------------------------- Banner Component ---------------------------->
-      */}
+     */}
       <Banner />
       <Container className="py-4">
         <h1 className="display-2 mb-4 text-center text-uppercase">
           Our <span className="fw-bold textBlue">Services</span>
         </h1>
+        {/* 
+<---------------------------- Services Component ---------------------------->
+      */}
         <Row xs={1} sm={2} md={3} className="g-3">
           {homeServices.map((service) => (
             <Service key={service.id} service={service} />

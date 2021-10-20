@@ -32,6 +32,9 @@ const Header = () => {
             <NavLink className="navLink" to="/membership">
               Membership
             </NavLink>
+            {/* 
+<----------------- Showing Logout Button If the user is logged in ----------------->
+ */}
             {user?.email ? (
               <Button className="ms-3" onClick={logOut} variant="danger">
                 Logout
@@ -46,11 +49,17 @@ const Header = () => {
                 </NavLink>
               </Fragment>
             )}
+            {/* 
+<----------------------- Showing Display Name of User ----------------------->
+ */}
             {user?.displayName && (
               <Navbar.Text className="ms-3 text-white">
                 <span>{user.displayName}</span>
               </Navbar.Text>
             )}
+            {/* 
+<----------------------- Showing User Display Picture ----------------------->
+ */}
             {user?.photoURL && (
               <img className="displayPic ms-3" src={user.photoURL} alt="" />
             )}

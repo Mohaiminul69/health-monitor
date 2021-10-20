@@ -11,11 +11,17 @@ const Login = () => {
   const location = useLocation();
   const history = useHistory();
   const redirect_uri = location.state?.from || "/home";
+  /*
+<--------- Redirecting to the path where the user came from or to home --------->
+*/
   const handleGoogleLogin = () => {
     signInUsingGoogle().then((res) => {
       history.push(redirect_uri);
     });
   };
+  /*
+<--------- Redirecting to the path where the user came from or to home --------->
+*/
   const handlePasswordVerification = (e) => {
     e.preventDefault();
     handleLogin().then((res) => {
@@ -72,6 +78,9 @@ const Login = () => {
                 </Col>
               </Form.Group>
             </Form>
+            {/* 
+<---------------------------- Showing Errors to UI ---------------------------->
+ */}
             {error && <p className="text-danger">{error}*</p>}
             <h6 className="mt-3">
               New to Health Monitor ? <Link to="register">Create Account</Link>

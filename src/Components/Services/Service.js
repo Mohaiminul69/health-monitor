@@ -16,6 +16,9 @@ const Service = ({ service }) => {
           <h3 className="mt-3">{serviceTitle}</h3>
           <p className="text-muted px-2">{description}</p>
         </div>
+        {/* 
+<------------------------ Redirecting to Dynamic Route ------------------------>
+ */}
         <Link to={`/service/${id}`}>
           <button className="btn btn-danger m-4 w-75 mt-0">Details</button>
         </Link>

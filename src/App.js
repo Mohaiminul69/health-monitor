@@ -15,6 +15,9 @@ import Services from "./Components/Services/Services";
 
 function App() {
   return (
+    /* 
+<---------------------------- Using Context API ---------------------------->
+     */
     <AuthProvider>
       <Router>
         <Header />
@@ -34,12 +37,21 @@ function App() {
           <Route path="/services">
             <Services />
           </Route>
+          {/* 
+<-------------------------- Dynamic Private Route -------------------------->
+        */}
           <PrivateRoute path="/service/:serviceDetails">
             <ServiceDetails />
           </PrivateRoute>
+          {/* 
+<------------------------------ Private Route ------------------------------>
+        */}
           <PrivateRoute path="/videoCall">
             <VideoCall />
           </PrivateRoute>
+          {/* 
+<------------------------------ Private Route ------------------------------>
+        */}
           <PrivateRoute path="/membership">
             <Membership />
           </PrivateRoute>

@@ -40,7 +40,7 @@ const footer = () => {
                       <Link to="#">book an appointment</Link>
                     </li>
                     <li>
-                      <Link to="#">faqs</Link>
+                      <Link to="#">FAQs</Link>
                     </li>
                     <li></li>
                   </ul>

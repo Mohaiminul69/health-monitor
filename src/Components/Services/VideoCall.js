@@ -4,7 +4,7 @@ import "./video.css";
 
 const VideoCall = () => {
   return (
-    <Container className="py-3">
+    <Container className="py-4">
       <div className="d-flex flex-column align-items-center">
         <h1 className="display-5 textBlue">DOCTOR</h1>
         <h1 className="display-3 text-danger">VIDEO CALL</h1>
